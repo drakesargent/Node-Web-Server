@@ -33,14 +33,14 @@ app.use((req, res, next)=>{
     next();
 });
 
-app.use((req, res, next)=>{
-    res.render(
-        'maintenance.hbs',
-        {
-            pageTitle:'**Maintenance**'
-        }
-    );
-});
+// app.use((req, res, next)=>{
+//     res.render(
+//         'maintenance.hbs',
+//         {
+//             pageTitle:'**Maintenance**'
+//         }
+//     );
+// });
 
 
 app.get('/', (req, res)=>{
@@ -57,6 +57,15 @@ app.get('/about', (req, res)=>{
     res.render(
        'about.hbs', {
            pageTitle:'About Page'
+       }
+    );
+});
+
+app.get('/projects', (req, res)=>{
+    res.render(
+       'projects.hbs', {
+           pageTitle:'Project Page',
+           body: "I'm still in progress."
        }
     );
 });
